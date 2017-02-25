@@ -6,11 +6,11 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles: {
-    var articleOne: {
-        title : 'Article one | Shailesh',
-        heading : 'Article one',
-        date : 'Feb26-2016',
-        content : ` 
+    var 'article-one': {
+        title: 'Article one | Shailesh',
+        heading: 'Article one',
+        date: 'Feb26-2016',
+        content:` 
                 <p>This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. 
                 </p>
                 <p>This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. 
@@ -18,20 +18,18 @@ var articles: {
                 <p>This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. This is content of my first article. 
                 </p>`
     },
-        
-    var articletwo: {
-        title : 'Article two | Shailesh',
-        heading : 'Article two',
-        date : 'March-2016',
-        content : ` 
+    var 'article-two': {
+        title: 'Article two | Shailesh',
+        heading: 'Article two',
+        date: 'March-2016',
+        content: ` 
                 <p>This is content of my second article. </p>`
     },
-        
-    var articlethree : {
-        title : 'Article three | Shailesh',
-        heading : 'Article three',
-        date : 'April-2016',
-        content : ` 
+    var 'article-three': {
+        title: 'Article three | Shailesh',
+        heading: 'Article three',
+        date: 'April-2016',
+        content: ` 
                 <p>This is content of my third article.</p>`
     }
 };
@@ -71,14 +69,15 @@ function createTemplate(data){
     </html>
     `;
     return htmlTemplate;
-};
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-  res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    //articleName==article-name
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two',function(req,res){

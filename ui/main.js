@@ -12,7 +12,7 @@ function moveRight(){
     if(marginLeft==200){
         marginLeft-=10;
     }
-    if(marginLeft==-200){
+    else if(marginLeft==-200){
         marginLeft+=10;
     }
 }

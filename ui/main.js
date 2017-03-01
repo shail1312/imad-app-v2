@@ -1,22 +1,15 @@
 console.log('Loaded!');
-//change the text of main text
-var element = document.getElementById('main-text');
-element.innerHTML='New value';
-
-//move the image
-var img = document.getElementById('madi');
-var marginLeft=0;
-function moveRight(){
-    marginLeft+=10;
-    img.style.marginLeft=marginLeft+'px';
-    if(marginLeft==200){
-        marginLeft-=10;
-    }
-    else if(marginLeft==-200){
-        marginLeft+=10;
-    }
-}
-img.onclick = function(){
-    alert('hello');
-    var interval=setInterval(moveRight,30);
+//counter code
+var counter =0;
+var button = document.getElementById('counter');
+button.onClick = function(){
+    
+    //make request to counter exd point
+    
+    //capture the responce and store it in a variable
+    
+    //rendre the variable in the correct spam
+    counter = counter+1;
+    var spam = document.getElementById('count');
+    spam.innerHTML = counter.toString();
 };

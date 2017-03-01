@@ -1,7 +1,7 @@
 console.log('Loaded!');
 //counter code
-var counter =0;
 var button = document.getElementById('counter');
+var counter =0;
 button.onClick = function(){
     
     //make request to counter exd point
@@ -10,6 +10,6 @@ button.onClick = function(){
     
     //rendre the variable in the correct spam
     counter = counter+1;
-    var spam = document.getElementById('count');
-    spam.innerHTML = counter.toString();
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
 };

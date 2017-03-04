@@ -1,6 +1,6 @@
 //counter code
 var button = document.getElementById('counter');
-button.onClick = function(){
+button.onclick = function(){
     
     //create the request
     var request = new XMLHttpRequest();
@@ -21,4 +21,12 @@ button.onClick = function(){
     //Make the request
     request.open('GET','http://shail1312.imad.hasura-app.io/counter',true)
     request.send(null);
+};
+
+//submit name 
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+    
 };

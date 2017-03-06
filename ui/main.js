@@ -49,7 +49,6 @@ submit.onclick = function(){
             }
         }
         //Not done yet
-        
     };
     //Make the request
     request.open('GET','http://shail1312.imad.hasura-app.io/submit-name?name='+name,true)

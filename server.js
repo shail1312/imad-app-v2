@@ -113,6 +113,7 @@ app.get('/articles/:articleName',function(req,res){
     var articleName= req.params.articleName;
     
     pool.query("SELECT * FROM article_tab where title = '"+req.params.articleName+"' ",function(err,result){
+        alert('found');
          if(err){
            res.status(500).send(err.toString());
        } else{
